@@ -110,12 +110,20 @@ class Vector3{
 		}
 	}
 
-	public function multiply(float $number) : Vector3{
-		return new Vector3($this->x * $number, $this->y * $number, $this->z * $number);
+	public function multiply(float $x, float $y = null, float $z = null) : Vector3{
+		if($y !== null and $z !== null){
+			return new Vector3($this->x * $x, $this->y * $y, $this->z * $z);
+		}else{
+			return new Vector3($this->x * $x, $this->y * $x, $this->z * $x);
+		}
 	}
 
-	public function divide(float $number) : Vector3{
-		return new Vector3($this->x / $number, $this->y / $number, $this->z / $number);
+	public function divide(float $x, float $y = null, float $z = null) : Vector3{
+		if($y !== null and $z !== null){
+			return new Vector3($this->x / $x, $this->y / $y, $this->z / $z);
+		}else{
+			return new Vector3($this->x / $x, $this->y / $x, $this->z / $x);
+		}
 	}
 
 	public function ceil() : Vector3{
