@@ -50,7 +50,7 @@ class Vector3{
 	 * @param float|int $y
 	 * @param float|int $z
 	 */
-	public function __construct(float $x = 0, float $y = 0, float $z = 0){
+	public function __construct($x = 0, $y = 0, $z = 0){
 		$this->x = $x;
 		$this->y = $y;
 		$this->z = $z;
